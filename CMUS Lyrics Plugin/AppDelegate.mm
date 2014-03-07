@@ -20,8 +20,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	// Insert code here to initialize your application
-	
 	cmusRemotePath = [[NSUserDefaults standardUserDefaults] stringForKey:@"cmus-remote-path"];
 	lyricsPath = [[NSUserDefaults standardUserDefaults] stringForKey:@"lyrics-path"];
 	period = [[NSUserDefaults standardUserDefaults] floatForKey:@"period"];
@@ -47,6 +45,7 @@
 	status = new CmusStatus(cmusRemotePath.UTF8String);
 	
 
+	[window setLevel:NSNormalWindowLevel];
 	
 	thread = [[NSThread alloc] initWithTarget:self selector:@selector(backgroundWork) object:nil];
 	[thread start];
