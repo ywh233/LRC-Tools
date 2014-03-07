@@ -230,7 +230,7 @@
 }
 
 -(IBAction) bringToFront:(id)sender {
-	[window makeKeyAndOrderFront:nil];
+	[NSApp activateIgnoringOtherApps: true];
 }
 
 @end

@@ -701,5 +701,51 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
+            timestampString = "415870007.491968"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
+            landmarkName = "-bringToFront:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate bringToFront:]"
+                  moduleName = "CMUS Lyrics Plugin"
+                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20Plugin/AppDelegate.mm"
+                  timestampString = "415870007.607035"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "233"
+                  endingLineNumber = "233"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate bringToFront:]"
+                  moduleName = "CMUS Lyrics Plugin"
+                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20Plugin/AppDelegate.mm"
+                  timestampString = "415870007.607311"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "233"
+                  endingLineNumber = "233"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
