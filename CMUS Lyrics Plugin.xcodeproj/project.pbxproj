@@ -476,6 +476,7 @@
 				E870C4D318C7E1D700456AF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E870C4D418C7E1D700456AF4 /* Build configuration list for PBXNativeTarget "CMUS Lyrics PluginTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +485,7 @@
 				E870C4D618C7E1D700456AF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -26,6 +26,7 @@
 	float period;
 	
 	BOOL notFoundFlag;
+	BOOL topMostFlag;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -40,6 +41,8 @@
 @property (assign) IBOutlet NSTextField* cmusPathField;
 @property (assign) IBOutlet NSTextField* lyricsPathField;
 @property (assign) IBOutlet NSTextField* periodField;
+
+@property (assign) IBOutlet NSButton* topmostCheckbox;
 
 -(IBAction) openPrefWindow:(id)sender;
 -(IBAction) closePrefWindow:(id)sender;

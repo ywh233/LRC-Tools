@@ -16,7 +16,7 @@
 
 @implementation AppDelegate
 
-@synthesize tfMain,tfn1,tfn2,tfp1,tfp2,window,settingWindow,cmusPathField,lyricsPathField,periodField;
+@synthesize tfMain,tfn1,tfn2,tfp1,tfp2,window,settingWindow,cmusPathField,lyricsPathField,periodField,topmostCheckbox;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -26,6 +26,8 @@
 	
 	int windowX = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"posx"];
 	int windowY = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"posy"];
+	
+	topMostFlag = [[NSUserDefaults standardUserDefaults] boolForKey:@"topmost"];
 	
 	if (cmusRemotePath == nil)
 		cmusRemotePath = DEFAULT_CMUS_REMOTE_PATH;
@@ -38,14 +40,16 @@
 	
 	if (lyricsPath == nil) {
 		lyricsPath = DEFAULT_LYRICS_PATH;
+		
+		topMostFlag = true;
+		
 		[self openPrefWindow:nil];
 	}
 	
+	[self updateTopmostMode];
+	
 	lrc = new Lyrics();
 	status = new CmusStatus(cmusRemotePath.UTF8String);
-	
-
-	[window setLevel:NSNormalWindowLevel];
 	
 	thread = [[NSThread alloc] initWithTarget:self selector:@selector(backgroundWork) object:nil];
 	[thread start];
@@ -178,6 +182,7 @@
 	cmusPathField.stringValue = cmusRemotePath;
 	lyricsPathField.stringValue = lyricsPath;
 	periodField.floatValue = period;
+	topmostCheckbox.state = topMostFlag?NSOnState:NSOffState;
 	[settingWindow makeKeyAndOrderFront:nil];
 }
 
@@ -189,11 +194,23 @@
 	cmusRemotePath = cmusPathField.stringValue;
 	lyricsPath = lyricsPathField.stringValue;
 	period = periodField.floatValue;
+	topMostFlag = (topmostCheckbox.state == NSOnState)?true:false;
 	[[NSUserDefaults standardUserDefaults] setObject:cmusRemotePath forKey:@"cmus-remote-path"];
 	[[NSUserDefaults standardUserDefaults] setObject:lyricsPath forKey:@"lyrics-path"];
 	[[NSUserDefaults standardUserDefaults] setFloat:period forKey:@"period"];
+	[[NSUserDefaults standardUserDefaults] setBool:topMostFlag forKey:@"topmost"];
+	
 	[[NSUserDefaults standardUserDefaults] synchronize];
 	
+	[self updateTopmostMode];
 	[self closePrefWindow:nil];
 }
+
+-(void)updateTopmostMode {
+	if (topMostFlag)
+		[window setLevel: NSStatusWindowLevel];
+	else
+		[window setLevel:NSNormalWindowLevel];
+}
+
 @end
