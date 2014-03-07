@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E854589018C98EB500900C99 /* EXView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E854588F18C98EB500900C99 /* EXView.mm */; };
 		E870C4A418C7E1D600456AF4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E870C4A318C7E1D600456AF4 /* Cocoa.framework */; };
 		E870C4AE18C7E1D600456AF4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E870C4AC18C7E1D600456AF4 /* InfoPlist.strings */; };
 		E870C4B018C7E1D600456AF4 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E870C4AF18C7E1D600456AF4 /* main.mm */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E854588E18C98EB500900C99 /* EXView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXView.h; sourceTree = "<group>"; };
+		E854588F18C98EB500900C99 /* EXView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EXView.mm; sourceTree = "<group>"; };
 		E870C4A018C7E1D600456AF4 /* CMUS Lyrics Plugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CMUS Lyrics Plugin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E870C4A318C7E1D600456AF4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E870C4A618C7E1D600456AF4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -130,6 +133,8 @@
 				E870C4D718C7E2AF00456AF4 /* Lyrics.cpp */,
 				E870C4DD18C81E7F00456AF4 /* CmusStatus.cpp */,
 				E870C4DE18C81E7F00456AF4 /* CmusStatus.h */,
+				E854588E18C98EB500900C99 /* EXView.h */,
+				E854588F18C98EB500900C99 /* EXView.mm */,
 			);
 			path = "CMUS Lyrics Plugin";
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				E870C4B018C7E1D600456AF4 /* main.mm in Sources */,
 				E870C4D918C7E2AF00456AF4 /* Lyrics.cpp in Sources */,
 				E870C4DF18C81E7F00456AF4 /* CmusStatus.cpp in Sources */,
+				E854589018C98EB500900C99 /* EXView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

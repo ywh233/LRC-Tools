@@ -47,4 +47,6 @@
 -(IBAction) openPrefWindow:(id)sender;
 -(IBAction) closePrefWindow:(id)sender;
 -(IBAction) closeAndSavePrefWindow:(id)sender;
+
+-(void) toggleTopmostMode;
 @end

@@ -213,4 +213,10 @@
 		[window setLevel:NSNormalWindowLevel];
 }
 
+-(void) toggleTopmostMode {
+	topMostFlag = !topMostFlag;
+	[[NSUserDefaults standardUserDefaults] setBool:topMostFlag forKey:@"topmost"];
+	[self updateTopmostMode];
+}
+
 @end
