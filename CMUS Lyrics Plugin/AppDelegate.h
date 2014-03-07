@@ -27,6 +27,8 @@
 	
 	BOOL notFoundFlag;
 	BOOL topMostFlag;
+	
+	NSStatusItem* statusItem;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -44,9 +46,13 @@
 
 @property (assign) IBOutlet NSButton* topmostCheckbox;
 
+@property (assign) IBOutlet NSMenu* statusItemMenu;
+
 -(IBAction) openPrefWindow:(id)sender;
 -(IBAction) closePrefWindow:(id)sender;
 -(IBAction) closeAndSavePrefWindow:(id)sender;
+
+-(IBAction) bringToFront:(id)sender;
 
 -(void) toggleTopmostMode;
 @end

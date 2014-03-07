@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856283.478174"
+            timestampString = "415866643.070595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "-backgroundWork"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856283.478174"
+            timestampString = "415866643.070595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "-fadeOutWindow:"
             landmarkType = "5">
             <Locations>
@@ -72,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856283.478174"
+            timestampString = "415866643.070595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "-fadeOutWindow:"
             landmarkType = "5">
          </BreakpointContent>
@@ -88,7 +88,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856283.478174"
+            timestampString = "415866643.070595"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "-backgroundWork"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
+            timestampString = "415866643.070595"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-backgroundWork"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
+            timestampString = "415866643.070595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
@@ -104,43 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856283.478174"
+            timestampString = "415866643.070595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "-backgroundWork"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856283.478174"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "-backgroundWork"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856283.478174"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "-backgroundWork"
             landmarkType = "5">
             <Locations>
@@ -474,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856005.576118"
+            timestampString = "415865825.354491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "-applicationDidFinishLaunching:"
             landmarkType = "5">
          </BreakpointContent>
@@ -490,57 +490,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856283.478174"
+            timestampString = "415866643.070595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "-windowWillClose:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate windowWillClose:]"
-                  moduleName = "CMUS Lyrics Plugin"
-                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20Plugin/AppDelegate.mm"
-                  timestampString = "415844143.95458"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "131">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate windowWillClose:]"
-                  moduleName = "CMUS Lyrics Plugin"
-                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20Plugin/AppDelegate.mm"
-                  timestampString = "415844143.954805"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "821">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856283.478174"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-windowWillClose:"
             landmarkType = "5">
             <Locations>
@@ -598,11 +552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856005.576118"
+            timestampString = "415865825.354491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-applicationDidFinishLaunching:"
             landmarkType = "5">
             <Locations>
@@ -644,11 +598,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856005.576118"
+            timestampString = "415865825.354491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "-applicationDidFinishLaunching:"
             landmarkType = "5">
          </BreakpointContent>
@@ -676,11 +630,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856312.171398"
+            timestampString = "415866643.070595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "-updateTopmostMode"
             landmarkType = "5">
          </BreakpointContent>
@@ -692,13 +646,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
-            timestampString = "415856325.086433"
+            timestampString = "415866643.070595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "-closeAndSavePrefWindow:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CMUS Lyrics Plugin/AppDelegate.mm"
+            timestampString = "415866643.070595"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-applicationWillTerminate:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate applicationWillTerminate:]"
+                  moduleName = "CMUS Lyrics Plugin"
+                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20Plugin/AppDelegate.mm"
+                  timestampString = "415866475.248274"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate applicationWillTerminate:]"
+                  moduleName = "CMUS Lyrics Plugin"
+                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20Plugin/AppDelegate.mm"
+                  timestampString = "415866475.248448"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "97">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

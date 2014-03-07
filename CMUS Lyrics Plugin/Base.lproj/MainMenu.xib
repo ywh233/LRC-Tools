@@ -74,6 +74,7 @@
                 <outlet property="lyricsPathField" destination="wTN-lU-yuE" id="D6U-hd-ugU"/>
                 <outlet property="periodField" destination="chH-Rm-aD4" id="mbf-j9-21F"/>
                 <outlet property="settingWindow" destination="gRP-t8-f8e" id="HOZ-xi-i55"/>
+                <outlet property="statusItemMenu" destination="RfG-C8-6dt" id="tEP-n6-Mp4"/>
                 <outlet property="tfMain" destination="LkR-5o-UZD" id="LCy-a3-R6K"/>
                 <outlet property="tfn1" destination="z1m-EE-Ggp" id="kvY-cd-lnE"/>
                 <outlet property="tfn2" destination="527-aV-78j" id="OcQ-Ky-lSE"/>
@@ -255,5 +256,29 @@ Gw
                 </subviews>
             </view>
         </window>
+        <menu id="RfG-C8-6dt">
+            <items>
+                <menuItem title="Bring to Front" id="vCS-kS-yGi">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="bringToFront:" target="494" id="L9Y-hB-9He"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="7Rp-Ub-3D3"/>
+                <menuItem title="Preferences..." id="dg7-Ga-rdx">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openPrefWindow:" target="494" id="EUX-QC-KQS"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="SRS-O4-E2F"/>
+                <menuItem title="Quit" id="utA-Ip-p6c">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="terminate:" target="-3" id="pEs-09-BFq"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
     </objects>
 </document>

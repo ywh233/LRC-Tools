@@ -16,10 +16,17 @@
 
 @implementation AppDelegate
 
-@synthesize tfMain,tfn1,tfn2,tfp1,tfp2,window,settingWindow,cmusPathField,lyricsPathField,periodField,topmostCheckbox;
+@synthesize tfMain,tfn1,tfn2,tfp1,tfp2,window,settingWindow,cmusPathField,lyricsPathField,
+			periodField,topmostCheckbox,statusItemMenu;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+	
+	statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength: NSVariableStatusItemLength];
+	[statusItem setHighlightMode:true];
+	[statusItem setMenu:statusItemMenu];
+	[statusItem setImage:[NSImage imageNamed:@"cmuslyrics-20.tif"]];
+
 	cmusRemotePath = [[NSUserDefaults standardUserDefaults] stringForKey:@"cmus-remote-path"];
 	lyricsPath = [[NSUserDefaults standardUserDefaults] stringForKey:@"lyrics-path"];
 	period = [[NSUserDefaults standardUserDefaults] floatForKey:@"period"];
@@ -55,19 +62,22 @@
 	[thread start];
 }
 
+- (void)applicationWillTerminate:(NSNotification *)aNotification {
+	[[NSUserDefaults standardUserDefaults] setInteger:window.frame.origin.x forKey:@"posx"];
+	[[NSUserDefaults standardUserDefaults] setInteger:window.frame.origin.y forKey:@"posy"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+		
+	[thread cancel];
+	
+	[[NSStatusBar systemStatusBar] removeStatusItem: statusItem];
+	
+	delete lrc;
+	delete status;
+}
+
 - (BOOL)windowWillClose:(NSNotification*)sender{
 	if ([sender object] == window) {
-		
-		[[NSUserDefaults standardUserDefaults] setInteger:window.frame.origin.x forKey:@"posx"];
-		[[NSUserDefaults standardUserDefaults] setInteger:window.frame.origin.y forKey:@"posy"];
-		[[NSUserDefaults standardUserDefaults] synchronize];
-		
-		[thread cancel];
-		
-		delete lrc;
-		delete status;
-		
-		exit(0);
+		[[NSApplication sharedApplication] terminate:nil];
 	}
 	return true;
 }
@@ -217,6 +227,10 @@
 	topMostFlag = !topMostFlag;
 	[[NSUserDefaults standardUserDefaults] setBool:topMostFlag forKey:@"topmost"];
 	[self updateTopmostMode];
+}
+
+-(IBAction) bringToFront:(id)sender {
+	[window makeKeyAndOrderFront:nil];
 }
 
 @end
