@@ -82,7 +82,7 @@
 		
 		NSString *statusStr = [NSString stringWithUTF8String:status->getItem("status").c_str()];
 		
-		if (statusStr!=nil && ([statusStr compare:@"stop"] == NSOrderedSame)) {
+		if (statusStr!=nil && ![statusStr isEqualToString:@"playing"]) {
 			[self fadeOutWindow:window];
 			[NSThread sleepForTimeInterval:period];
 			continue;
