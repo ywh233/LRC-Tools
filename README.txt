@@ -42,8 +42,8 @@ Classes Implemented
 Lyrics:
 A class that loads the lrc code into a string vector that stores the lines of 
 lyrics and an integer time array that stores the relations from time 
-(centisec) to index of lyrics array. The size of the time array is 
-100 min * 60 sec * 100 centisec/sec * 4 bytes/int = 2.29 mb; searching for 
+(centisec) to index of lyrics array. The initial size of the time array is 
+10 min * 60 min/sec * 100 centisec/sec * 2 bytes/short = 117 kb; searching for 
 lyrics at any time positions will be constant time operation.
 
 CmusStatus:

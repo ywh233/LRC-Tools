@@ -30,10 +30,12 @@ public:
 	void reset(std::string lyrics); // change lyrics
 	
 private:
-	static const int TIME_MAP_SIZE = 600000; //100*60*100
+	static const int INIT_TIME_MAP_SIZE = 60000; // 10 mins
+	//static const int TIME_MAP_SIZE = 600000; //100*60*100
 	static const int LRC_MAP_SIZE = 1024;
 	
-	int* timeMap; // index: centiTime; value: index to lyrics line. (-1 means no lyrics)
+	int timeMapSize;
+	unsigned short* timeMap; // index: centiTime; value: index to lyrics line. (-1 means no lyrics)
 	std::vector<std::string> lyricsMap; // lyrics
 	
 	std::string title;
@@ -45,6 +47,8 @@ private:
 	
 	void constructArrayFromLrc(std::string lyrics);
 	void setMetaInfo(std::string field, std::string data);
+	
+	void initArray();
 };
 
 #endif /* defined(__CMUS_Lyrics_Plugin__Lyrics__) */
