@@ -38,6 +38,26 @@
                ReferencedContainer = "container:CMUS Lyrics Plugin.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E8178E9418CAE11C0027BD55"
+               BuildableName = "CMUS Lyrics Plugin Tests.xctest"
+               BlueprintName = "CMUS Lyrics Plugin Tests"
+               ReferencedContainer = "container:CMUS Lyrics Plugin.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E8178EAB18CAEB210027BD55"
+               BuildableName = "CMUSLyricsPluginTests.xctest"
+               BlueprintName = "CMUSLyricsPluginTests"
+               ReferencedContainer = "container:CMUS Lyrics Plugin.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -54,7 +74,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">

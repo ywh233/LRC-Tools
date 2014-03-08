@@ -182,11 +182,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "Lyrics::reset(std::string lyrics)"
             landmarkType = "5">
          </BreakpointContent>
@@ -198,11 +198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "Lyrics::constructArrayFromLrc(std::string lyrics)"
             landmarkType = "5">
          </BreakpointContent>
@@ -214,11 +214,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "Lyrics::getLyricsAtIndex(int index)"
             landmarkType = "5">
             <Locations>
@@ -274,11 +274,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "Lyrics::getIndexOfLyrics(int millisecond)"
             landmarkType = "5">
          </BreakpointContent>
@@ -290,11 +290,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "Lyrics::getLyricsAtIndex(int index)"
             landmarkType = "5">
             <Locations>
@@ -336,11 +336,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146">
+            startingLineNumber = "147"
+            endingLineNumber = "147">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -350,11 +350,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "Lyrics::getIndexOfLyrics(int millisecond)"
             landmarkType = "5">
          </BreakpointContent>
@@ -366,11 +366,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "Lyrics::constructArrayFromLrc(std::string lyrics)"
             landmarkType = "5">
             <Locations>
@@ -426,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "Lyrics::constructArrayFromLrc(std::string lyrics)"
             landmarkType = "5">
          </BreakpointContent>
@@ -442,11 +442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "Lyrics::reset(std::string lyrics)"
             landmarkType = "5">
          </BreakpointContent>
@@ -458,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "Lyrics::reset(std::string lyrics)"
             landmarkType = "5">
          </BreakpointContent>
@@ -536,11 +536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "Lyrics::~Lyrics()"
             landmarkType = "5">
          </BreakpointContent>
@@ -614,11 +614,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
-            timestampString = "415931863.957386"
+            timestampString = "415949672.889089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "Lyrics::getIndexOfLyrics(int millisecond)"
             landmarkType = "5">
          </BreakpointContent>
@@ -743,6 +743,202 @@
                   startingLineNumber = "233"
                   endingLineNumber = "233"
                   offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CMUS Lyrics PluginTests/TestLyricsClass.mm"
+            timestampString = "415934731.470701"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-expandTest"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CMUS Lyrics PluginTests/TestLyricsClass.mm"
+            timestampString = "415934736.685513"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-expandTest"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TestLyricsClass expandTest]"
+                  moduleName = "CMUS Lyrics PluginTests"
+                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20PluginTests/TestLyricsClass.mm"
+                  timestampString = "415934797.384084"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TestLyricsClass expandTest]"
+                  moduleName = "CMUS Lyrics PluginTests"
+                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20PluginTests/TestLyricsClass.mm"
+                  timestampString = "415934797.384423"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "143">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TestLyricsClass expandTest]"
+                  moduleName = "CMUS Lyrics PluginTests"
+                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20PluginTests/TestLyricsClass.mm"
+                  timestampString = "415934797.384827"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "551">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TestLyricsClass expandTest]"
+                  moduleName = "CMUS Lyrics PluginTests"
+                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20PluginTests/TestLyricsClass.mm"
+                  timestampString = "415934797.385198"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1066">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
+            timestampString = "415950260.982829"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "prefixExtension(unsigned short* arr, int length)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CMUS Lyrics Plugin/Lyrics.cpp"
+            timestampString = "415950314.117989"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
+            landmarkName = "prefixExtension(unsigned short* arr, int length)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CMUS Lyrics Plugin Tests/LyricsClassTest.mm"
+            timestampString = "415951371.936116"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-expansion"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LyricsClassTest expansion]"
+                  moduleName = "CMUS Lyrics Plugin Tests"
+                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20Plugin%20Tests/LyricsClassTest.mm"
+                  timestampString = "415951373.994752"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LyricsClassTest expansion]"
+                  moduleName = "CMUS Lyrics Plugin Tests"
+                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20Plugin%20Tests/LyricsClassTest.mm"
+                  timestampString = "415951373.995031"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "143">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LyricsClassTest expansion]"
+                  moduleName = "CMUS Lyrics Plugin Tests"
+                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20Plugin%20Tests/LyricsClassTest.mm"
+                  timestampString = "415951373.995353"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "551">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LyricsClassTest expansion]"
+                  moduleName = "CMUS Lyrics Plugin Tests"
+                  urlString = "file:///Volumes/Data/Projects/Programming/CMUS%20Lyrics%20Plugin/CMUS%20Lyrics%20Plugin%20Tests/LyricsClassTest.mm"
+                  timestampString = "415951373.995647"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "1066">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -21,6 +21,7 @@ Lyrics::Lyrics() {
 	artist = "";
 	album = "";
 	offset = 0;
+	lastTmIndex = 0;
 	
 	initArray();
 }
@@ -103,7 +104,7 @@ void Lyrics::constructArrayFromLrc(std::string lyrics) {
 		lyrics = match.suffix().str();
 	}
 	
-	prefixExtension(timeMap, lastTmIndex);
+	prefixExtension(timeMap, lastTmIndex + 1);
 }
 
 // expand it to 1.5 * toHold
@@ -169,6 +170,12 @@ int Lyrics::getOffset() {
 }
 
 void prefixExtension(unsigned short* arr, int length) {
+	if (length < 1)
+		return;
+
+	if (arr[0] == 0)
+		arr[0] = -1;
+	
 	for (int i = 1; i < length; i++) {
 		if (arr[i] == 0)
 			arr[i] = arr[i-1];

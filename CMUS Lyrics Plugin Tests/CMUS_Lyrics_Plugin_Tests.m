@@ -1,18 +1,18 @@
 //
-//  CMUS_Lyrics_PluginTests.m
-//  CMUS Lyrics PluginTests
+//  CMUS_Lyrics_Plugin_Tests.m
+//  CMUS Lyrics Plugin Tests
 //
-//  Created by Yuwei Huang on 14-3-5.
+//  Created by Yuwei Huang on 14-3-7.
 //  Copyright (c) 2014年 Yuwei Huang. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface CMUS_Lyrics_PluginTests : XCTestCase
+@interface CMUS_Lyrics_Plugin_Tests : XCTestCase
 
 @end
 
-@implementation CMUS_Lyrics_PluginTests
+@implementation CMUS_Lyrics_Plugin_Tests
 
 - (void)setUp
 {
@@ -26,9 +26,5 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
 
 @end
