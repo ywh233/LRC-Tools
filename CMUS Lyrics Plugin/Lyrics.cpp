@@ -114,7 +114,7 @@ unsigned short* makeNewMapToHoldTheIndexAndFreeTheOldOne(unsigned short* map, in
 	int newSize = (int)toHold * 1.5f;
 	
 	unsigned short* newMap = (unsigned short*)calloc(newSize, sizeof(unsigned short));
-	memcpy(newMap, map, origSize);
+	memcpy(newMap, map, origSize * sizeof(unsigned short));
 	free(map);
 	
 	*mapSize = newSize;

@@ -77,11 +77,14 @@ Lyrics* lrc;
 
 - (void)testExpansion
 {
-	lrc->reset("[00:01.12]A\n[30:00.00]B");
+	lrc->reset("[00:01.12]A\n[09:00.00]B\n[30:00.00]C");
 	if (lrc->getLyrics(60000).compare("A")!=0)
 		XCTFail("Error");
+		
+	if (lrc->getLyrics(540000).compare("B")!=0)
+		XCTFail("Error");
 	
-	if (lrc->getLyrics(1800000).compare("B")!=0)
+	if (lrc->getLyrics(1800000).compare("C")!=0)
 		XCTFail("Error");
 }
 
