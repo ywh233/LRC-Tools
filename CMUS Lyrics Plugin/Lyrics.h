@@ -17,6 +17,8 @@ class Lyrics {
 public:
 	Lyrics();
 	Lyrics(std::string lyrics);
+	Lyrics(std::string lyrics, bool linearize);
+	// linearize: makes lyricsMap sorted in the order of time. Strings may be duplicated.
 	~Lyrics();
 	
 	std::string getTitle();
@@ -27,15 +29,16 @@ public:
 	std::string getLyrics(int millisecond); // empty string if not found. same below
 	std::string getLyricsAtIndex(int index);
 	int getIndexOfLyrics(int millisecond); // -1 means not found
-	void reset(std::string lyrics); // change lyrics
+	void reset(std::string lyrics, bool linearlize); // change lyrics
+	void reset(std::string lyrics);
 	
 private:
 	static const int INIT_TIME_MAP_SIZE = 60000; // 10 mins
 	//static const int TIME_MAP_SIZE = 600000; //100*60*100
-	static const int LRC_MAP_SIZE = 1024;
+	static const int LRC_MAP_SIZE = 512;
 	
 	int timeMapSize;
-	unsigned short* timeMap; // index: centiTime; value: index to lyrics line. (-1 means no lyrics)
+	short* timeMap; // index: centiTime; value: index to lyrics line. (-1 means no lyrics)
 	std::vector<std::string> lyricsMap; // lyrics
 	
 	std::string title;
@@ -45,7 +48,7 @@ private:
 	
 	int lastTmIndex; // the last index of timeMap that stores lyrics index
 	
-	void constructArrayFromLrc(std::string lyrics);
+	void constructArrayFromLrc(std::string lyrics, bool linearize);
 	void setMetaInfo(std::string field, std::string data);
 	
 	void initArray();

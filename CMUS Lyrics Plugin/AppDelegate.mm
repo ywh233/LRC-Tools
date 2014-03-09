@@ -116,7 +116,7 @@
 		if (lrcFilename== nil || [lrcFilename compare:filename]!=NSOrderedSame) {
 			NSString *lrcText = [NSString stringWithContentsOfFile:filename
 				encoding:NSUTF8StringEncoding error:nil];
-			lrc->reset(lrcText.UTF8String);
+			lrc->reset(lrcText.UTF8String, true);
 			lrcFilename = filename;
 			notFoundFlag = false;
 			

@@ -12,9 +12,10 @@
 
 // extends former lyrics index and decrement.
 // [0, 0, 1, 0, 0, 2, 3, 0, 4] => [-1, -1, 0, 0, 0, 1, 2, 2, 3]
-void prefixExtension(unsigned short* arr, int length);
-void emptyMap(unsigned short* map, int length);
-unsigned short* makeNewMapToHoldTheIndexAndFreeTheOldOne(unsigned short* map, int* mapSize, int toHold);
+void prefixExtension(short* arr, int length);
+std::vector<std::string> linearPrefixExtension(std::vector<std::string> lrcMap, short* time, int lastTmIndex);
+void emptyMap(short* map, int length);
+short* makeNewMapToHoldTheIndexAndFreeTheOldOne(short* map, int* mapSize, int toHold);
 
 Lyrics::Lyrics() {
 	title = "";
@@ -28,7 +29,12 @@ Lyrics::Lyrics() {
 
 Lyrics::Lyrics(std::string lyrics) {
 	initArray();
-	reset(lyrics);
+	reset(lyrics, false);
+}
+
+Lyrics::Lyrics(std::string lyrics, bool linearize) {
+	initArray();
+	reset(lyrics, linearize);
 }
 
 Lyrics::~Lyrics() {
@@ -38,11 +44,15 @@ Lyrics::~Lyrics() {
 
 void Lyrics::initArray() {
 	timeMapSize = INIT_TIME_MAP_SIZE;
-	timeMap = (unsigned short*)calloc(timeMapSize, sizeof(unsigned short));
+	timeMap = (short*)calloc(timeMapSize, sizeof(short));
 	lyricsMap.reserve(LRC_MAP_SIZE);
 }
 
 void Lyrics::reset(std::string lyrics) {
+	reset(lyrics, false);
+}
+
+void Lyrics::reset(std::string lyrics, bool linearize) {
 	emptyMap(timeMap, lastTmIndex + 1); // empty case: timeMap[0] = 0
 	
 	lastTmIndex = 0;
@@ -53,10 +63,10 @@ void Lyrics::reset(std::string lyrics) {
 	artist = "";
 	album = "";
 	offset = 0;
-	constructArrayFromLrc(lyrics);
+	constructArrayFromLrc(lyrics, linearize);
 }
 
-void Lyrics::constructArrayFromLrc(std::string lyrics) {
+void Lyrics::constructArrayFromLrc(std::string lyrics, bool linearize) {
 
 	std::smatch match;
 	std::regex exp("(\\[.+\\])+([^\\[\\n]*)(\\n|$)"); // match a line
@@ -104,17 +114,54 @@ void Lyrics::constructArrayFromLrc(std::string lyrics) {
 		lyrics = match.suffix().str();
 	}
 	
-	prefixExtension(timeMap, lastTmIndex + 1);
+	if (linearize)
+		lyricsMap = linearPrefixExtension(lyricsMap, timeMap, lastTmIndex);
+	else
+		prefixExtension(timeMap, lastTmIndex + 1);
+}
+
+// linearizes the lyrics vector, must before prefix extension
+std::vector<std::string> linearPrefixExtension(std::vector<std::string> lrcMap, short* time, int lastTmIndex) {
+	std::vector<std::string> newLrcMap;
+	newLrcMap.reserve(lrcMap.capacity());
+	
+	if (lastTmIndex < 0)
+		return newLrcMap;
+
+	int newLrcMapIndex = 0;
+	
+	if (time[0] == 0) // first element
+		time[0] = -1;
+	else {
+		newLrcMap.push_back(lrcMap[time[0]-1]);
+		time[0]--;
+		newLrcMapIndex++;
+	}
+	
+	
+	for (int i = 1; i <= lastTmIndex; i++) {
+	
+		if (time[i] == 0) {
+			time[i] = time[i-1];
+			continue;
+		}
+		
+		newLrcMap.push_back(lrcMap[time[i]-1]);
+		time[i] = newLrcMapIndex;
+		newLrcMapIndex++;
+	}
+	lrcMap.clear();
+	return newLrcMap;
 }
 
 // expand it to 1.5 * toHold
 // !! original map will be freed
-unsigned short* makeNewMapToHoldTheIndexAndFreeTheOldOne(unsigned short* map, int* mapSize, int toHold) {
+short* makeNewMapToHoldTheIndexAndFreeTheOldOne(short* map, int* mapSize, int toHold) {
 	int origSize = *mapSize;
 	int newSize = (int)toHold * 1.5f;
 	
-	unsigned short* newMap = (unsigned short*)calloc(newSize, sizeof(unsigned short));
-	memcpy(newMap, map, origSize * sizeof(unsigned short));
+	short* newMap = (short*)calloc(newSize, sizeof(short));
+	memcpy(newMap, map, origSize * sizeof(short));
 	free(map);
 	
 	*mapSize = newSize;
@@ -169,7 +216,7 @@ int Lyrics::getOffset() {
 	return offset;
 }
 
-void prefixExtension(unsigned short* arr, int length) {
+void prefixExtension(short* arr, int length) {
 	if (length < 1)
 		return;
 
@@ -184,7 +231,7 @@ void prefixExtension(unsigned short* arr, int length) {
 	}
 }
 
-void emptyMap(unsigned short* map, int length) {
+void emptyMap(short* map, int length) {
 	for (int i = 0; i < length; i++)
 		map[i] = 0;
 }

@@ -94,4 +94,21 @@ Lyrics* lrc;
 	lrc->getLyrics(1565);
 }
 
+- (void)testLinearize
+{
+	lrc->reset("[03:10.23][03:25.24]AA\n[03:20.96]BB\n[03:28.53]CC", true);
+	
+	if (lrc->getIndexOfLyrics(190230)!=0)
+		XCTFail("Returned wrong index: %d", lrc->getIndexOfLyrics(190230));
+	
+	if (lrc->getIndexOfLyrics(200960)!=1)
+		XCTFail("Returned wrong index: %d", lrc->getIndexOfLyrics(200960));
+		
+	if (lrc->getIndexOfLyrics(205240)!=2)
+		XCTFail("Returned wrong index: %d", lrc->getIndexOfLyrics(205240));
+		
+	if (lrc->getIndexOfLyrics(208530)!=3)
+		XCTFail("Returned wrong index: %d", lrc->getIndexOfLyrics(208530));
+}
+
 @end
