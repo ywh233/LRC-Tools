@@ -24,9 +24,10 @@ bool CmusStatus::refreshStatus() {
 	char statusBuf[1024];
 	int statusBufIndex = 0;
     while(!feof(pipe)) {
-    	if(fgets(buffer, 32, pipe) != NULL)
+    	if(fgets(buffer, 32, pipe) != NULL && statusBufIndex + strlen(buffer) < 1024) {
     		strcpy(statusBuf+statusBufIndex, buffer);
 			statusBufIndex+=strlen(buffer);
+		}
     }
 	statusString = statusBuf;
 	pclose(pipe);
