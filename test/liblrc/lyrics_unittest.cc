@@ -1,7 +1,7 @@
 //******************************************
 //  Author : Yuwei Huang
 //  Created On : Fri Feb 09 2018
-//  File : lyricstest.cc
+//  File : lyrics_unittest.cc
 //******************************************
 
 #include "liblrc/lyrics.h"
@@ -26,7 +26,6 @@ class LyricsTest : public testing::Test {
 std::unique_ptr<Lyrics> LyricsTest::CreateTestLyrics(int32_t adjustment) {
   std::vector<Lyrics::LyricLine> test_lines = {
       {100, 0, "Line:100"},
-      {0, 0, "Line:0"},
       {70, 0, "Line:70"},
       {60, 0, "Line:60"},
       {40, 0, "Line:40"},
@@ -39,7 +38,6 @@ std::unique_ptr<Lyrics> LyricsTest::CreateTestLyrics(int32_t adjustment) {
     "title",
     "lyricsWriter",
     "fileCreator",
-    999,
     adjustment
   };
   return std::make_unique<Lyrics>(metadata, std::move(test_lines));
@@ -64,7 +62,6 @@ TEST_F(LyricsTest, VerifyMetadata) {
   EXPECT_EQ("title", lyrics->GetMetadata().title);
   EXPECT_EQ("lyricsWriter", lyrics->GetMetadata().lyricsWriter);
   EXPECT_EQ("fileCreator", lyrics->GetMetadata().fileCreator);
-  EXPECT_EQ(999, lyrics->GetMetadata().length);
   EXPECT_EQ(-1, lyrics->GetMetadata().adjustment);
 }
 
@@ -73,15 +70,15 @@ TEST_F(LyricsTest, LookupEmptyLyrics) {
   meta.adjustment = 0;
   Lyrics lyrics(meta, {});
 
+  EXPECT_EQ("", lyrics.LyricAt(1).lyric);
   EXPECT_EQ(lyrics.IteratorBegin(), lyrics.LyricIteratorAt(1));
-  EXPECT_EQ(lyrics.IteratorEnd(), lyrics.LyricIteratorAt(1));
 }
 
 TEST_F(LyricsTest, LookupFirstLyric) {
   std::unique_ptr<Lyrics> lyrics = CreateTestLyrics(0);
 
   EXPECT_EQ(lyrics->IteratorBegin(), lyrics->LyricIteratorAt(0));
-  VerifyLyricAtOffset(lyrics.get(), 0, 20, "Line:0");
+  VerifyLyricAtOffset(lyrics.get(), 0, 20, "");
 }
 
 TEST_F(LyricsTest, LookupInTheMiddle) {
@@ -129,8 +126,8 @@ TEST_F(LyricsTest, LinearLookup) {
   std::unique_ptr<Lyrics> lyrics = CreateTestLyrics(0);
 
   std::array<std::string, 12> lyric_texts {
-    "Line:0",  // 0
-    "Line:0",  // 10
+    "",  // 0
+    "",  // 10
     "Line:20",
     "Line:20",
     "Line:40",
@@ -153,22 +150,63 @@ TEST_F(LyricsTest, RandomLookup) {
   std::unique_ptr<Lyrics> lyrics = CreateTestLyrics(0);
 
   std::array<std::tuple<uint32_t, std::string>, 11> lookups {
-    std::make_tuple(25u, "Line:20"),
-    std::make_tuple(200u, "Line:100"),
-    std::make_tuple(60u, "Line:60"),
-    std::make_tuple(81u, "Line:70"),
-    std::make_tuple(65u, "Line:60"),
-    std::make_tuple(100u, "Line:100"),
-    std::make_tuple(40u, "Line:40"),
-    std::make_tuple(0u, "Line:0"),
-    std::make_tuple(7u, "Line:0"),
-    std::make_tuple(50u, "Line:40"),
-    std::make_tuple(92u, "Line:70")
+    std::make_tuple(25, "Line:20"),
+    std::make_tuple(200, "Line:100"),
+    std::make_tuple(60, "Line:60"),
+    std::make_tuple(81, "Line:70"),
+    std::make_tuple(65, "Line:60"),
+    std::make_tuple(100, "Line:100"),
+    std::make_tuple(40, "Line:40"),
+    std::make_tuple(0, ""),
+    std::make_tuple(7, ""),
+    std::make_tuple(50, "Line:40"),
+    std::make_tuple(92, "Line:70")
   };
 
   for (const auto& lookup : lookups) {
     EXPECT_EQ(std::get<1>(lookup), lyrics->LyricAt(std::get<0>(lookup)).lyric);
   }
+}
+
+TEST_F(LyricsTest, PositiveAdjustment) {
+  std::unique_ptr<Lyrics> lyrics = CreateTestLyrics(10);
+
+  EXPECT_EQ("", lyrics->LyricAt(0).lyric);
+  EXPECT_EQ("", lyrics->LyricAt(20).lyric);
+  EXPECT_EQ("Line:20", lyrics->LyricAt(30).lyric);
+  EXPECT_EQ("Line:100", lyrics->LyricAt(999).lyric);
+  EXPECT_EQ("Line:60", lyrics->LyricAt(70).lyric);
+  EXPECT_EQ("Line:70", lyrics->LyricAt(80).lyric);
+}
+
+TEST_F(LyricsTest, NegativeAdjustment) {
+  std::unique_ptr<Lyrics> lyrics = CreateTestLyrics(-10);
+
+  EXPECT_EQ("", lyrics->LyricAt(0).lyric);
+  EXPECT_EQ("Line:20", lyrics->LyricAt(10).lyric);
+  EXPECT_EQ("Line:100", lyrics->LyricAt(999).lyric);
+  EXPECT_EQ("Line:60", lyrics->LyricAt(50).lyric);
+  EXPECT_EQ("Line:70", lyrics->LyricAt(60).lyric);
+}
+
+TEST_F(LyricsTest, GreaterNegativeAdjustment) {
+  std::unique_ptr<Lyrics> lyrics = CreateTestLyrics(-30);
+
+  EXPECT_EQ("Line:20", lyrics->LyricAt(0).lyric);
+  EXPECT_EQ("Line:40", lyrics->LyricAt(10).lyric);
+  EXPECT_EQ("Line:100", lyrics->LyricAt(999).lyric);
+  EXPECT_EQ("Line:60", lyrics->LyricAt(30).lyric);
+  EXPECT_EQ("Line:70", lyrics->LyricAt(40).lyric);
+}
+
+TEST_F(LyricsTest, InvalidOffset) {
+  std::unique_ptr<Lyrics> lyrics = CreateTestLyrics(-10);
+
+  EXPECT_EQ("", lyrics->LyricAt(-1).lyric);
+  EXPECT_EQ(lyrics->IteratorEnd(), lyrics->LyricIteratorAt(-1));
+  EXPECT_EQ("", lyrics->LyricAt(Lyrics::kEndTimeNever).lyric);
+  EXPECT_EQ(lyrics->IteratorEnd(),
+            lyrics->LyricIteratorAt(Lyrics::kEndTimeNever));
 }
 
 }
