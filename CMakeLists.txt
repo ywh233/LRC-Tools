@@ -12,4 +12,5 @@ enable_testing()
 
 add_subdirectory(deps)
 add_subdirectory(liblrc)
+add_subdirectory(cli)
 add_subdirectory(test)

@@ -6,10 +6,13 @@
 
 #include "lrc_parser.h"
 
+#include <fstream>
 #include <regex>
 #include <sstream>
 #include <string>
 #include <vector>
+
+#include "utils.h"
 
 namespace lrc {
 
@@ -22,7 +25,7 @@ static const std::regex kMetadataExp(R"exp(\[([a-zA-Z]+):([^\]]+)\])exp");
 static const std::regex kLyricExp(R"exp(\]([^\]]*)\r?$)exp");
 
 // G1: mm, G2: ss
-static const std::regex kTimestampExp(R"exp(\[(\d\d):(\d\d\.\d\d)\])exp");
+static const std::regex kTimestampExp(R"exp(\[(\d\d:\d\d\.\d\d)\])exp");
 
 void SetMetadata(Lyrics::Metadata* metadata,
                  const std::string& key,
@@ -49,13 +52,12 @@ void SetMetadata(Lyrics::Metadata* metadata,
 LrcParser::LrcParser() {}
 LrcParser::~LrcParser() {}
 
-std::unique_ptr<Lyrics> LrcParser::Parse(
-    const std::string& lrc_string) const {
-  Lyrics::Metadata metadata;
+std::unique_ptr<Lyrics> LrcParser::ParseStream(
+    std::istream* stream) const {
+  Lyrics::Metadata metadata {"", "", "", "", "", 0};
   std::vector<Lyrics::LyricLine> lyric_lines;
 
-  std::stringstream stream(lrc_string);
-  for (std::string line; std::getline(stream, line); ) {
+  for (std::string line; std::getline(*stream, line); ) {
     std::smatch metadata_match;
     // Assume one metadata tag per line.
     if (std::regex_search(line, metadata_match, kMetadataExp)) {
@@ -77,13 +79,10 @@ std::unique_ptr<Lyrics> LrcParser::Parse(
     std::smatch timestamp_match;
     while (regex_search(
         search_start, line.cend(), timestamp_match, kTimestampExp)) {
-
-      int minutes = std::stoi(timestamp_match[1]);
-      float seconds = std::stof(timestamp_match[2]);
-      int millisecond_sum = 60000 * minutes + static_cast<int>(1000 * seconds);
+      int32_t time_ms = utils::TimeStringToMilliseconds(timestamp_match[1]);
 
       Lyrics::LyricLine lyric_line;
-      lyric_line.start_time = millisecond_sum;
+      lyric_line.start_time = time_ms;
       lyric_line.lyric = lyric;
       lyric_lines.push_back(lyric_line);
 
@@ -93,4 +92,20 @@ std::unique_ptr<Lyrics> LrcParser::Parse(
   return std::make_unique<Lyrics>(metadata, std::move(lyric_lines));
 }
 
+std::unique_ptr<Lyrics> LrcParser::ParseString(
+    const std::string& lrc_string) const {
+  std::stringstream stream(lrc_string);
+  return ParseStream(&stream);
+}
+
+std::unique_ptr<Lyrics> LrcParser::ParseFile(
+    const std::string& filename) const {
+  std::ifstream stream(filename);
+  if (!stream.is_open()) {
+    return nullptr;
+  }
+  std::unique_ptr<Lyrics> lyrics = ParseStream(&stream);
+  stream.close();
+  return lyrics;
+}
 }  // namespace lrc

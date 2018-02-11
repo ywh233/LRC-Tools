@@ -7,6 +7,7 @@
 #ifndef LIBLRC_LRC_PARSER_H
 #define LIBLRC_LRC_PARSER_H
 
+#include <istream>
 #include <memory>
 
 #include "lyrics.h"
@@ -18,7 +19,12 @@ class LrcParser {
   LrcParser();
   ~LrcParser();
 
-  std::unique_ptr<Lyrics> Parse(const std::string& lrc_string) const;
+  std::unique_ptr<Lyrics> ParseStream(std::istream* lrc_string) const;
+
+  std::unique_ptr<Lyrics> ParseString(const std::string& lrc_string) const;
+
+  // Returns nullptr if there is trouble loading the file.
+  std::unique_ptr<Lyrics> ParseFile(const std::string& filename) const;
 
  private:
   LrcParser(const LrcParser&) = delete;
