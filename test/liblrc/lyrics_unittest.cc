@@ -18,8 +18,8 @@ class LyricsTest : public testing::Test {
  protected:
   std::unique_ptr<Lyrics> CreateTestLyrics(int32_t adjustment);
   void VerifyLyricAtOffset(Lyrics* lyrics,
-                           uint32_t offset,
-                           uint32_t end_time,
+                           int32_t offset,
+                           int32_t end_time,
                            const std::string& line);
 };
 
@@ -45,8 +45,8 @@ std::unique_ptr<Lyrics> LyricsTest::CreateTestLyrics(int32_t adjustment) {
 
 
 void LyricsTest::VerifyLyricAtOffset(Lyrics* lyrics,
-                                     uint32_t offset,
-                                     uint32_t end_time,
+                                     int32_t offset,
+                                     int32_t end_time,
                                      const std::string& line) {
   EXPECT_EQ(line, lyrics->LyricAt(offset).lyric);
   EXPECT_EQ(end_time, lyrics->LyricAt(offset).end_time);
@@ -140,7 +140,7 @@ TEST_F(LyricsTest, LinearLookup) {
     "Line:100"  // 110
   };
 
-  for (int i = 0; i < lyric_texts.size(); i++) {
+  for (size_t i = 0; i < lyric_texts.size(); i++) {
     int offset = i * 10;
     EXPECT_EQ(lyric_texts[i], lyrics->LyricAt(offset).lyric);
   }

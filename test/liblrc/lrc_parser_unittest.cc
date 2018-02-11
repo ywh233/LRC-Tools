@@ -34,6 +34,12 @@ int32_t Offset(const std::string& time_str) {
   return utils::TimeStringToMilliseconds(time_str) + 10;
 }
 
+Lyrics::LyricLine CreateExpectedLyric(int32_t start,
+                                      int32_t end,
+                                      const std::string& lyric) {
+  return {start, end, lyric};
+}
+
 }  // namespace
 
 TEST(LrcParserTest, VerifyMetadata) {
@@ -70,12 +76,12 @@ TEST(LrcParserTest, VerifyCRLF) {
 
 TEST(LrcParserTest, VerifyLyricLines) {
   std::array<Lyrics::LyricLine, 6> expected_lyrics = {
-    Lyrics::LyricLine {0, Offset("0:00.1"), ""},
-    Lyrics::LyricLine {Offset("0:00.1"), Offset("0:05"), "L1"},
-    Lyrics::LyricLine {Offset("0:05"), Offset("0:10"), "L2"},
-    Lyrics::LyricLine {Offset("0:10"), Offset("1:20.35"), "L3"},
-    Lyrics::LyricLine {Offset("1:20.35"), Offset("1:40.2"), "L2"},
-    Lyrics::LyricLine {Offset("1:40.2"), Lyrics::kEndTimeNever, "L3"}
+    CreateExpectedLyric(0, Offset("0:00.1"), ""),
+    CreateExpectedLyric(Offset("0:00.1"), Offset("0:05"), "L1"),
+    CreateExpectedLyric(Offset("0:05"), Offset("0:10"), "L2"),
+    CreateExpectedLyric(Offset("0:10"), Offset("1:20.35"), "L3"),
+    CreateExpectedLyric(Offset("1:20.35"), Offset("1:40.2"), "L2"),
+    CreateExpectedLyric(Offset("1:40.2"), Lyrics::kEndTimeNever, "L3")
   };
 
   LrcParser parser;

@@ -1,7 +1,9 @@
-cmake_minimum_required(VERSION 3.10.0)
+cmake_minimum_required(VERSION 3.2.0)
 project(LRCTools VERSION 1.0.0)
 
-add_compile_options(-std=c++14)
+set(CMAKE_CXX_FLAGS
+    "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -Wextra -Wno-missing-braces")
+
 include_directories(${CMAKE_CURRENT_LIST_DIR})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
