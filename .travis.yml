@@ -1,9 +1,22 @@
-dist: trusty
+distro: trusty
+sudo: required
 language: cpp
-compiler: clang
+
+matrix:
+  include:
+    # Ideally use Clang.
+    - compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-5
+      env: MATRIX_COMPILER=g++-5
 
 script:
   - mkdir build
   - cd build
+  - cmake -DCMAKE_CXX_COMPILER=${MATRIX_COMPILER} ..
   - make -j 8
   - make test
