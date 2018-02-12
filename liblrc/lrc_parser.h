@@ -19,7 +19,7 @@ class LrcParser {
   LrcParser();
   ~LrcParser();
 
-  std::unique_ptr<Lyrics> ParseStream(std::istream* lrc_string) const;
+  std::unique_ptr<Lyrics> ParseStream(std::istream* stream) const;
 
   std::unique_ptr<Lyrics> ParseString(const std::string& lrc_string) const;
 
