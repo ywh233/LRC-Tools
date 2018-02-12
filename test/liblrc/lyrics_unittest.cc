@@ -40,7 +40,7 @@ std::unique_ptr<Lyrics> LyricsTest::CreateTestLyrics(int32_t adjustment) {
     "fileCreator",
     adjustment
   };
-  return std::make_unique<Lyrics>(metadata, std::move(test_lines));
+  return std::unique_ptr<Lyrics>(new Lyrics(metadata, std::move(test_lines)));
 }
 
 

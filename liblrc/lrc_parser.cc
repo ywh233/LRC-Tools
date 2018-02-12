@@ -89,7 +89,7 @@ std::unique_ptr<Lyrics> LrcParser::ParseStream(
       search_start += timestamp_match.position() + timestamp_match.length();
     }
   }
-  return std::make_unique<Lyrics>(metadata, std::move(lyric_lines));
+  return std::unique_ptr<Lyrics>(new Lyrics(metadata, std::move(lyric_lines)));
 }
 
 std::unique_ptr<Lyrics> LrcParser::ParseString(
