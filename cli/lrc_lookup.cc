@@ -6,9 +6,9 @@
 
 #include <iostream>
 
-#include "cxxopts.hpp"
 #include "liblrc/lrc_parser.h"
 #include "liblrc/utils.h"
+#include "third_party/cxxopts/include/cxxopts.hpp"
 
 void ShowHelp(const cxxopts::Options& options, int exit_code) {
   std::cout << options.help({""}) << std::endl;

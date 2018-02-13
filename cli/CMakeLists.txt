@@ -1,6 +1,3 @@
-get_target_property(CXXOPTS_INCLUDE cxxopts INCLUDE_DIRECTORY)
-include_directories(${CXXOPTS_INCLUDE})
-
 # lrc_metadata
 file(GLOB SRCS_LRC_METADATA
     "lrc_metadata.cc")
