@@ -70,5 +70,3 @@ Follow all the steps in [Building](#building), then run:
 
 * [GoogleTest](https://github.com/google/googletest)
 * [cxxopts](https://github.com/jarro2783/cxxopts)
-
-They will be automatically downloaded when you build the project. Note that none of them are dependency of the lrc library.
